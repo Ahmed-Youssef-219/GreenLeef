@@ -1,8 +1,8 @@
 import Image from "next/image";
 import hardscape from "@public/hardscap_2.png";
 import irrigation from "@public/irrigation.png";
-import landscape from "@public/landscape_2.png";
-import outdoor from "@public/outdoor_2.png";
+import landscape from "@public/Landscape_2.png";
+import outdoor from "@public/Outdoor_2.png";
 const Services = () => {
 
   const flex_col_center = "flex flex-col items-center justify-center";
@@ -40,7 +40,7 @@ const Services = () => {
             className="w-full"
           />
           <div className="p-4 c">
-            <h3 className="text-xl py-1 font-semibold">Hardscaping</h3>
+            <h3 className="text-xl py-1 font-semibold">Irrigation systems</h3>
             <p className="text-[11px] py-1 text-[#B06D7E]">4 WEEKS TO BUILD</p>
             <p className="py-1 text-[#351D23]">Installation of patios, walkways, and retaining walls.</p>
             <button className="my-2 bg-[#0F080A] text-[#EAD7DC] py-2 px-4 rounded-md hover:scale-90">Show Details</button>
@@ -54,7 +54,7 @@ const Services = () => {
             className="w-full"
           />
           <div className="p-4 c">
-            <h3 className="text-xl py-1 font-semibold">Hardscaping</h3>
+            <h3 className="text-xl py-1 font-semibold">Outdoor lighting</h3>
             <p className="text-[11px] py-1 text-[#B06D7E]">4 WEEKS TO BUILD</p>
             <p className="py-1 text-[#351D23]">Installation of patios, walkways, and retaining walls.</p>
             <button className="my-2 bg-[#0F080A] text-[#EAD7DC] py-2 px-4 rounded-md hover:scale-90">Show Details</button>
@@ -68,7 +68,7 @@ const Services = () => {
             className="w-full"
           />
           <div className="p-4 c">
-            <h3 className="text-xl py-1 font-semibold">Hardscaping</h3>
+            <h3 className="text-xl py-1 font-semibold">Landscape Design</h3>
             <p className="text-[11px] py-1 text-[#B06D7E]">4 WEEKS TO BUILD</p>
             <p className="py-1 text-[#351D23]">Installation of patios, walkways, and retaining walls.</p>
             <button className="my-2 bg-[#0F080A] text-[#EAD7DC] py-2 px-4 rounded-md hover:scale-90">Show Details</button>
