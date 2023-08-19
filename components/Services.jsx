@@ -1,8 +1,8 @@
 import Image from "next/image";
-import hardscape from "@public/hardscap_2.png";
+import hardscape from "@public/hardscap2.png";
 import irrigation from "@public/irrigation.png";
-import landscape from "@public/landscape_2.png";
-import outdoor from "@public/outdoor_2.png";
+import landscape from "@public/landscape2.png";
+import outdoor from "@public/outdoor2.png";
 const Services = () => {
 
   const flex_col_center = "flex flex-col items-center justify-center";
