@@ -8,7 +8,7 @@ const Navbar = () => {
   const flex_between = "flex items-center justify-between";
   const [active, setActive] = useState(false);
   return (
-    <header className="bg-[#D2F1A7] relative p-3  font-lato">
+    <header className="bg-[#D2F1A7] relative p-3 font-lato fixed top-0 right-0 left-0">
       <div className={`${flex_between} mx-4 sm:mx-10 md:mx-18 `}>
         <h2 className="text-[#0F080A] font-bold text-md sm:text-lg md:text-xl font-pacifico">
           GreenLeef Landscape

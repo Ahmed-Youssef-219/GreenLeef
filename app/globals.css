@@ -9,3 +9,22 @@
     box-sizing: border-box;
     transition: all 0.3s ease;
 }
+
+.images_container {
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) - 12px);
+    scroll-snap-type: x mandatory;
+  }
+  
+  
+@media screen and (max-width: 1090px) {
+    .images_container {
+      grid-auto-columns: calc((100% / 2) - 9px);
+    }
+  }
+  
+@media screen and (max-width: 760px) {
+    .images_container {
+      grid-auto-columns: 100%;
+    }
+  }

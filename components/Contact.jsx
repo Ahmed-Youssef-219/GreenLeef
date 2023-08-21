@@ -1,6 +1,12 @@
+'use client'
 import { BsFacebook } from "react-icons/bs";
 import { AiFillInstagram, AiOutlineTwitter } from "react-icons/ai";
 const Contact = () => {
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+  }
+
   return (
     <section id="contact" className="text-[#EAD7DC]">
       <div className="flex flex-col items-center justify-center">
@@ -34,7 +40,7 @@ const Contact = () => {
                 <label htmlFor="message">Full Name</label>
                 <textarea name="message" id="message" rows="10" placeholder="Enter Your Message" className="w-full my-2 p-2 outline-none rounded-sm bg-white/25 focus:scale-105 resize-none"></textarea>
             </div>
-            <button type="submit" className="py-3 px-7 border rounded-md text-lg">Send</button>
+            <button type="submit" className="py-3 px-7 border rounded-md text-lg hover:scale-90" onClick={handleSubmit}>Send</button>
         </form>
       </div>
     </section>
