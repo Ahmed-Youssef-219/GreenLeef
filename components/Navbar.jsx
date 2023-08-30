@@ -14,7 +14,7 @@ const Navbar = () => {
   }
 
   return (
-    <header className="bg-[#D2F1A7]/50 backdrop-blur-sm fixed p-3 font-lato fixed top-0 right-0 left-0 z-20">
+    <header className="bg-[#D2F1A7]/80 backdrop-blur-sm fixed p-3 font-lato fixed top-0 right-0 left-0 z-20">
       <div className={`${flex_between} mx-4 sm:mx-10 md:mx-18 `}>
         <h2 className="text-[#0F080A] font-bold text-md sm:text-lg md:text-2xl font-pacifico">
           GreenLeef Landscape
@@ -59,7 +59,7 @@ const Navbar = () => {
         </button>
         {/* mobile navbar  */}
         {active && (
-          <nav className="bg-[#D2F1A7]/70 backdrop-blur-sm absolute top-0 left-0 right-0 bg-[#D2F1A7]">
+          <nav className="bg-[#D2F1A7]/80 backdrop-blur-sm absolute top-0 left-0 right-0 bg-[#D2F1A7]">
             <AiOutlineClose
               className="text-lg m-2 cursor-pointer"
               onClick={() => setActive(false)}
