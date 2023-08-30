@@ -16,7 +16,7 @@ const Navbar = () => {
   return (
     <header className="bg-[#D2F1A7]/80 backdrop-blur-sm fixed p-3 font-lato fixed top-0 right-0 left-0 z-20">
       <div className={`${flex_between} mx-4 sm:mx-10 md:mx-18 `}>
-        <h2 className="text-[#0F080A] font-bold text-md sm:text-lg md:text-2xl font-pacifico">
+        <h2 className="text-[#0F080A] py-2 font-bold text-lg sm:text-xl md:text-2xl font-pacifico">
           GreenLeef Landscape
         </h2>
         <HiMenu
