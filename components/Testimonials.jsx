@@ -22,7 +22,7 @@ const Testimonials = () => {
     draggable: true,
     autoplay: true,
     arrows: true,
-    speed: 3000,
+    speed: 500,
   };
 
   return (
