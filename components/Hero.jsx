@@ -5,7 +5,7 @@ const Hero = () => {
   const flex_col_center = "flex flex-col items-center justify-center";
 
   return (
-    <section 
+    <section
       id="hero"
       className={`w-screen h-screen bg-hero bg-center bg-cover text-[#EAD7DC] ${flex_col_center}`}
     >
@@ -29,15 +29,16 @@ const Hero = () => {
         Transforming your outdoor space into a beautiful oasis. Expert
         landscaping services tailored to your needs.
       </motion.p>
-
-      <motion.button
-        initial={{ y: 100, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.3 }}
-        className="mt-6 py-2 px-4 rounded-sm bg-[#0F080A] hover:scale-95"
-      >
-        Explore Our Services
-      </motion.button>
+      <div className="hover:scale-95">
+        <motion.button
+          className="mt-6 py-2 px-4 rounded-sm bg-[#0F080A] "
+          initial={{ y: 100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.3 }}
+        >
+          Explore Our Services
+        </motion.button>
+      </div>
     </section>
   );
 };
