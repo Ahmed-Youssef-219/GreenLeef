@@ -1,4 +1,4 @@
-"use client";
+'use client'
 import { useState } from "react";
 import { HiMenu } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
@@ -7,9 +7,11 @@ const Navbar = () => {
   const flex_between = "flex items-center justify-between";
   const [active, setActive] = useState(false);
 
-  window.onscroll = () => {
-    setActive(false);
-  };
+  if (typeof window !== 'undefined'){
+    window.onscroll = () => {
+      setActive(false);
+    };
+  }
 
   return (
     <header className="bg-[#D2F1A7] fixed p-3 font-lato fixed top-0 right-0 left-0 z-20">

@@ -9,7 +9,9 @@ import { motion } from "framer-motion";
 const Testimonials = () => {
   const [deviceWidth, setDeviceWidth] = useState(1000);
 
-  window.onresize = () => setDeviceWidth(window.innerWidth);
+  if (typeof window !== 'undefined'){
+    window.onresize = () => setDeviceWidth(window.innerWidth);
+  }
 
   var settings = {
     dots: true,
