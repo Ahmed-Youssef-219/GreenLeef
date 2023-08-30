@@ -1,11 +1,12 @@
-'use client'
+"use client";
 import { motion } from "framer-motion";
 import Link from "next/link";
 const Hero = () => {
   const flex_col_center = "flex flex-col items-center justify-center";
 
   return (
-    <div
+    <section 
+      id="hero"
       className={`w-screen h-screen bg-hero bg-center bg-cover text-[#EAD7DC] ${flex_col_center}`}
     >
       <motion.div
@@ -28,19 +29,16 @@ const Hero = () => {
         Transforming your outdoor space into a beautiful oasis. Expert
         landscaping services tailored to your needs.
       </motion.p>
-      <motion.div
+
+      <motion.button
         initial={{ y: 100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.3 }}
+        className="mt-6 py-2 px-4 rounded-sm bg-[#0F080A] hover:scale-95"
       >
-        <Link
-          href="./services"
-          className="mt-6 py-2 px-4 rounded-sm bg-[#0F080A] hover:scale-95"
-        >
-          Explore Our Services
-        </Link>
-      </motion.div>
-    </div>
+        Explore Our Services
+      </motion.button>
+    </section>
   );
 };
 
