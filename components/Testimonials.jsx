@@ -1,48 +1,51 @@
 "use client";
-import TextimonialsCard from "./subComponents/TextimonialsCard";
-import { useRef } from "react";
-import Slider from "./lib/Slider";
+import TestimonialsCard from "./subComponents/TestimonialsCard";
+import { useState } from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { motion } from "framer-motion";
 
 const Testimonials = () => {
-  const card = useRef();
+  const [deviceWidth, setDeviceWidth] = useState(1000);
+
+  window.onresize = () => setDeviceWidth(window.innerWidth);
+
+  var settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: deviceWidth > 900 ? 3 : deviceWidth > 600 ? 2 : 1,
+    slidesToScroll: 1,
+    draggable: true,
+    autoplay: true,
+    arrows: true,
+    speed: 3000,
+  };
 
   return (
-    <section id="textimonials">
-      <h2 className="text-[#EAD7DC] text-center mt-14 text-4xl">
+    <section id="testimonials" className="mb-14 mt-24">
+      <motion.h2
+        className="text-[#EAD7DC] text-center mt-14 text-4xl"
+        initial={{ y: 100, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.3 }}
+      >
         Testimonials
-      </h2>
-
-      <Slider card={card}>
-        <div  ref={card} draggable={false}  className="mx-4">
-          <TextimonialsCard imagesrc="person1" />
-        </div>
-        <div  ref={card} draggable={false}  className="mx-4">
-          <TextimonialsCard imagesrc="person2" />
-        </div>
-        <div  ref={card} draggable={false}  className="mx-4">
-          <TextimonialsCard imagesrc="person3" />
-        </div>
-        <div  ref={card} draggable={false} className="mx-4">
-          <TextimonialsCard imagesrc="person4" />
-        </div>
-        <div  ref={card} draggable={false} className="mx-4">
-          <TextimonialsCard imagesrc="person5" />
-        </div>
-        <div  ref={card} draggable={false} className="mx-4">
-          <TextimonialsCard imagesrc="person4" />
-        </div>
-        <div  ref={card} draggable={false} className="mx-4">
-          <TextimonialsCard imagesrc="person3" />
-        </div>
-        <div  ref={card} draggable={false} className="mx-4">
-          <TextimonialsCard imagesrc="person2" />
-        </div>
-        <div  ref={card} draggable={false} className="mx-4">
-          <TextimonialsCard imagesrc="person1" />
-        </div>
-      </Slider>
-
-      
+      </motion.h2>
+      <motion.div
+        initial={{ y: 100, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.3 }}
+      >
+        <Slider {...settings} className="cursor-grab">
+          <TestimonialsCard imagesrc="person1" />
+          <TestimonialsCard imagesrc="person2" />
+          <TestimonialsCard imagesrc="person3" />
+          <TestimonialsCard imagesrc="person4" />
+          <TestimonialsCard imagesrc="person5" />
+        </Slider>
+      </motion.div>
     </section>
   );
 };

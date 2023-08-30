@@ -1,41 +1,53 @@
 "use client";
 import { useState } from "react";
-import Link from "next/link";
 import { HiMenu } from "react-icons/hi";
-import {AiOutlineClose} from 'react-icons/ai';
+import { AiOutlineClose } from "react-icons/ai";
 
 const Navbar = () => {
   const flex_between = "flex items-center justify-between";
   const [active, setActive] = useState(false);
+
+  window.onscroll = () => {
+    setActive(false);
+  };
+
   return (
-    <header className="bg-[#D2F1A7] relative p-3 font-lato fixed top-0 right-0 left-0">
+    <header className="bg-[#D2F1A7] fixed p-3 font-lato fixed top-0 right-0 left-0 z-20">
       <div className={`${flex_between} mx-4 sm:mx-10 md:mx-18 `}>
-        <h2 className="text-[#0F080A] font-bold text-md sm:text-lg md:text-xl font-pacifico">
+        <h2 className="text-[#0F080A] font-bold text-md sm:text-lg md:text-2xl font-pacifico">
           GreenLeef Landscape
         </h2>
-        <HiMenu className="flex md:hidden cursor-pointer" onClick={() => setActive(true)} />
+        <HiMenu
+          className="flex md:hidden cursor-pointer"
+          onClick={() => setActive(true)}
+        />
         {/* desktop navbar */}
         <nav className="hidden md:flex">
           <ul className={`${flex_between} gap-8 text-[#351D23]`}>
             <li className="hover:scale-95">
-              <Link href="/howitworks" className="p-2">
-                How It Works
-              </Link>
+              <a href="#about" className="p-2">
+                About
+              </a>
             </li>
             <li className="hover:scale-95">
-              <Link href="/services" className="p-2">
+              <a href="#services" className="p-2">
                 Services
-              </Link>
+              </a>
             </li>
             <li className="hover:scale-95">
-              <Link href="/contractors" className="p-2">
-                Contractors
-              </Link>
+              <a href="#testimonials" className="p-2">
+                Testimonials
+              </a>
             </li>
             <li className="hover:scale-95">
-              <Link href="/gallery" className="p-2">
+              <a href="#gallery" className="p-2">
                 Gallery
-              </Link>
+              </a>
+            </li>
+            <li className="hover:scale-95">
+              <a href="#contact" className="p-2">
+                Contact
+              </a>
             </li>
           </ul>
         </nav>
@@ -46,32 +58,42 @@ const Navbar = () => {
         {/* mobile navbar  */}
         {active && (
           <nav className="absolute top-0 left-0 right-0 bg-[#D2F1A7]">
-            <AiOutlineClose className="text-lg m-2 cursor-pointer" onClick={() => setActive(false)} />
-            <ul className={`flex flex-col items-end justify-center gap-6 pb-4 text-[#351D23]`}>
+            <AiOutlineClose
+              className="text-lg m-2 cursor-pointer"
+              onClick={() => setActive(false)}
+            />
+            <ul
+              className={`flex flex-col items-end justify-center gap-6 pb-4 text-[#351D23]`}
+            >
               <li className="hover:scale-95">
-                <Link href="/howitworks" className="p-2">
-                  How It Works
-                </Link>
+                <a href="#about" className="p-2">
+                  About
+                </a>
               </li>
               <li className="hover:scale-95">
-                <Link href="/services" className="p-2">
+                <a href="#services" className="p-2">
                   Services
-                </Link>
+                </a>
               </li>
               <li className="hover:scale-95">
-                <Link href="/contractors" className="p-2">
-                  Contractors
-                </Link>
+                <a href="#testimonials" className="p-2">
+                  Testimonials
+                </a>
               </li>
               <li className="hover:scale-95">
-                <Link href="/gallery" className="p-2">
+                <a href="#gallery" className="p-2">
                   Gallery
-                </Link>
+                </a>
               </li>
               <li className="hover:scale-95">
-                <Link href="/login" className="p-2">
+                <a href="#contact" className="p-2">
+                  Contact
+                </a>
+              </li>
+              <li className="hover:scale-95">
+                <a href="#login" className="p-2">
                   login
-                </Link>
+                </a>
               </li>
             </ul>
           </nav>

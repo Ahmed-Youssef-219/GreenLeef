@@ -1,10 +1,10 @@
 import { BsStarFill, BsStarHalf } from "react-icons/bs";
-import Image from "next/image";
 
-const TextimonialsCard = ({imagesrc}) => {
+
+const TestimonialsCard = ({imagesrc}) => {
   return (
     <>
-      <div className="card w-[300px] mx-4 my-8">
+      <div className="card w-[300px] mx-auto my-8">
         <div className="flex items-center justify-between">
           <div className="flex items-center ">
             <div className="w-10 h-10 rounded-full mr-4 bg-cover bg-center" style={{backgroundImage: `url('${imagesrc}.jpg')`}} />
@@ -29,4 +29,4 @@ const TextimonialsCard = ({imagesrc}) => {
   );
 };
 
-export default TextimonialsCard;
+export default TestimonialsCard;
