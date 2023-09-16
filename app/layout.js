@@ -20,14 +20,28 @@ const lato = Lato({
 });
 
 export const metadata = {
-  title: "Greenleef Landscape",
+  title: "Greenleef Landscape - Exceptional Landscaping Services",
   description:
-    "Welcome to Greenleef Landscape, your premier destination for all your landscaping needs. With years of experience in the industry, we specialize in providing top-notch landscape design, hardscaping, outdoor lighting, and irrigation system installation services.",
+    "Greenleef Landscape is a professional landscaping company that provides exceptional landscaping services to clients in [your area]. We specialize in designing and installing beautiful and functional landscapes that meet the needs of our clients. We also offer a variety of ongoing maintenance services to keep your landscape looking its best.",
+
+  openGraph: {
+    title: "Greenleef Landscape - Exceptional Landscaping Services",
+    description:
+      "Greenleef Landscape is a professional landscaping company that provides exceptional landscaping services to clients in [your area]. We specialize in designing and installing beautiful and functional landscapes that meet the needs of our clients. We also offer a variety of ongoing maintenance services to keep your landscape looking its best.",
+  },
 };
+
+//   <meta name="description" content="">
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${pacifico.variable} ${lato.variable}`}>
+      <head>
+        <meta
+          name="google-site-verification"
+          content="MH8D2PmfPRulK5S-WC7ZcxKOoGO7tHDrsAtm_95GxTE"
+        />
+      </head>
       <body className="bg-[#21261A]">
         <Navbar />
         {children}
