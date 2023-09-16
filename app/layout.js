@@ -41,6 +41,10 @@ export default function RootLayout({ children }) {
           name="google-site-verification"
           content="MH8D2PmfPRulK5S-WC7ZcxKOoGO7tHDrsAtm_95GxTE"
         />
+        <meta
+          name="keywords"
+          content="landscaping services, landscape design, landscape installation, landscape maintenance, Greenleef Landscape, Germany"
+        ></meta>
       </head>
       <body className="bg-[#21261A]">
         <Navbar />
