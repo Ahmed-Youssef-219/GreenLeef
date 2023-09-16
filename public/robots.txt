@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://green-leef.vercel.app/
+
+# Sitemaps
+Sitemap: https://green-leef.vercel.app/sitemap.xml
